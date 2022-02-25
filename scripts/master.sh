@@ -1,6 +1,6 @@
 #! /bin/bash
 
-MASTER_IP="172.192.1.10"
+MASTER_IP="192.168.55.10"
 NODENAME=$(hostname -s)
 POD_CIDR="192.168.0.0/16"
 
@@ -80,7 +80,3 @@ mkdir -p /home/vagrant/.kube
 sudo cp -i /vagrant/configs/config /home/vagrant/.kube/
 sudo chown 1000:1000 /home/vagrant/.kube/config
 EOF
-
-
-
-

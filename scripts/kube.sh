@@ -9,13 +9,14 @@ sudo swapoff -a
 # keeps the swaf off during reboot
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
-sudo apt-get update -y
-sudo apt-get install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
+sudo apt-get update -y  
+sudo apt-get install -y apt-transport-https && apt-get install -y ca-certificates
+sudo apt-get install -y curl && sudo apt-get install -y gnupg && sudo apt-get install -y lsb-release
+    #apt-transport-https \
+    #ca-certificates \
+    #curl \
+    #gnupg \
+    #lsb-release
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
